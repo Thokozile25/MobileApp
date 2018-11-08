@@ -1,0 +1,46 @@
+{
+    "name": "MobileApplication",
+    "short_name": "MobileApp",
+    "description": "An app which provides information for the different modes of transport.",
+    "icons": [
+        {
+            "src": "/home/pgd-swd/MobileApp/Assignment2/images/1048480_110803083958_Gautrain-train.jpg",
+            "sizes": "32x32",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "Assignment3/images/blob",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "Assignment3/images/2cdd09a9e987466f98203b85c4aaf3c7.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "Assignment3/images/2833b497538940aba2aa2c51540740f0.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        },
+        {
+            "src": "Assignment3/images/59590-640x360-overground-train_640.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "Assignment3/images/kisspng-pedestrian-crossing-traffic-sign-5ae0f77785c2f5.7254789415246928555479.jpg",
+            "sizes": "256x256",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "Assignment3/images/sports_car---do-not-delete-444683.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ],
+    "start_url": "/pwa-examples/js13kpwa/index.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+}
