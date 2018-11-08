@@ -1,26 +1,20 @@
-self.importScripts('data/games.js');
+
 
 // Files to cache
 var cacheName = 'Assignment3';
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  '/MobileApp/Assignment3/script/manifest.json',
+  '/MobileApp/Assignment3/bulma.min.css',
+  '/MobileApp/Assignment3/index,html',
+  '/MobileApp/Assignment3/main.js',
+  '/MobileApp/Assignment3/images//home/pgd-swd/MobileApp/Assignment2/images/1048480_110803083958_Gautrain-train.jpg"',
+  '/MobileApp/Assignment3/images/Assignment3/images/blob',
+  '/MobileApp/Assignment3/images/Assignment3/images/2cdd09a9e987466f98203b85c4aaf3c7.png',
+  '/MobileApp/Assignment3/images/2833b497538940aba2aa2c51540740f0.png',
+  '/MobileApp/Assignment3/images/59590-640x360-overground-train_640.jpg',
+  '/MobileApp/Assignment3/images/kisspng-pedestrian-crossing-traffic-sign-5ae0f77785c2f5.7254789415246928555479.jpg',
+  '/MobileApp/Assignment3/images/sports_car---do-not-delete-444683.jpg',
+  
 ];
 var gamesImages = [];
 for(var i=0; i<games.length; i++) {
