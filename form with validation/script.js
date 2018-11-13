@@ -5,13 +5,13 @@ var app = new Vue ({
         password:"",
         usernameError: false,
         passwordError: false,
-        usernameErrorMessage: ''
+        usernameErrorMessage: []
     },
     methods:{
         login: function(){
             this.usernameError = false
             this.passwordError = false 
-            this.usernameErrorMessage = ''
+            this.usernameErrorMessage = []
 
 
             if(this.password.length < 6) {
@@ -20,13 +20,18 @@ var app = new Vue ({
 
             if(this.username.length < 3) {
                 this.usernameError = true
-                this.usernameErrorMessage = 'Username is too short'
+                this.usernameErrorMessage.push({msg:'Username is too short',date: Date.now()})
+                var errorMessage = {
+                    msg: 'new Error Message',
+                    date: Date.now()
+                }
+                this.usernameErrorMessage.push(errorMessage)
             }
 
 
             if(!this.username.includes("@")){
                 this.usernameError = true
-                this.usernameErrorMessage = 'Username must be a valid email address'
+                this.usernameErrorMessage.push({msg:'Username must be a valid email address',date: Date.now()})
             }
         } 
         
@@ -34,3 +39,23 @@ var app = new Vue ({
 
     }
 })
+// app.js
+
+window.addEventListener('load', function() {
+
+    var webAuth = new auth0.WebAuth({
+      domain: 'thokozilendlebe.auth0.com',
+      clientID: 'zcQl1KAq-txqnQu0PkDYl09uQXCMhCfa',
+      responseType: 'token id_token',
+      scope: 'openid',
+      redirectUri: window.location.href
+    });
+  
+    var loginBtn = document.getElementById('login');
+  
+    loginBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      webAuth.authorize();
+    });
+  
+  });

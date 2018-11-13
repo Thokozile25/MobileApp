@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
     </head>
     <body>
         <div class= "section" id= "app">
@@ -9,16 +10,24 @@
         <div class= "field">
             <label class="label">Username</label>
             <input class="input" type="text" id="username" v-model="username" />
-            <div class="has-text-danger" v-if="usernameError == true"> There was an issue with your username 
+            <div class="has-text-danger" v-if="usernameError == true"> Username must be a valid email address
         </div>
         <div class="field">
             <label class="label">Password</label>
             <input class="input" type="password" id="password" v-model="password"/>
-            <div class="has-text-danger" v-if="usernameError == true"> There was an issue with your password
+         <!---->   <div class="has-text-danger" v-if="usernameError == true"> There was an issue with your password
         </div>
+        <ul>
+            <li v-for="error in usernameErrorMessage">
+                {{ error.msg }}
+                <span>
+                    <small>{{ new Date(error.date).toString() }} </small>
+                </span>
+            </li>
+        </ul>
 
         <div class="field">
-        <button v-on-click="enter" class="button is-primary" type="submit" @click="login" >Login</button>
+        <button v-on-click="enter" id="login"class="button is-primary" type="submit" @click="login" >Login</button>
         </div>
 
         </form>
