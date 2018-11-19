@@ -45,15 +45,12 @@
               <input 
                 placeholder="start" 
                 v-model="startAddress" 
-                v-on:keyup="autocomplete(true)">
+                v-on:keyup="autocomplete">
             </div>
             <div>
-              <input 
-                placeholder="end" 
-                v-model="destinationAddress"
-                v-on:keyup="autocomplete(false)">
+              <input placeholder="end" v-model="destinationAddress" v-on:keyup="autocomplete1">
             </div>
-            <button @click="search">Search</button>
+            <button >Search</button>
           </form>
           
         </div>
